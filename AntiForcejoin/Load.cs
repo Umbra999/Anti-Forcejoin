@@ -43,9 +43,8 @@ namespace AntiForcejoin
         // If you dirty skids gonna steal it give me atleast credits :*
 
         // Telling the Photonserver to use a hidden instance type
-        private static void HandleInstanceFlow(ref EnterRoomParams __0)
+        private static void HandleInstanceFlow(EnterRoomParams __0)
         {
-            Logger.Log(__0.field_Public_String_0);
             if (__0.field_Public_String_0.Contains("~private") && __0.field_Public_String_0.Contains("~nonce") && __0.field_Public_String_0.Contains(APIUser.CurrentUser.id) && !__0.field_Public_String_0.Contains("~strict") && !__0.field_Public_String_0.Contains("~canRequestInvite"))
             {
                 __0.field_Public_String_0 += "~strict";
